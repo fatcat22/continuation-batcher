@@ -479,7 +479,7 @@ impl Prover for ProofPieceInfo {
                 #[cfg(not(feature = "perf"))]
                 halo2_gen_proof!(transcript, schema);
                 let r = transcript.finalize();
-                let mut reader = PoseidonRead::init(&r[..]);
+                // let mut reader = PoseidonRead::init(&r[..]);
                 // verify_proof!(reader, schema, r);
                 r
             }
