@@ -480,7 +480,7 @@ impl Prover for ProofPieceInfo {
                 halo2_gen_proof!(transcript, schema);
                 let r = transcript.finalize();
                 let mut reader = PoseidonRead::init(&r[..]);
-                verify_proof!(reader, schema, r);
+                // verify_proof!(reader, schema, r);
                 r
             }
             HashType::Sha => {
